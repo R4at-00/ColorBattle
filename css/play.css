@@ -1,0 +1,144 @@
+header{
+    justify-content: left;
+}
+main{
+    padding: 30px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#title{
+    text-align: center;
+}
+
+#game-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.player-container{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between  ;
+}
+
+.player-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nickname{
+    padding-top: 10px;
+    font-size: 0.8em;
+}
+
+.countdown{
+    font-size: 0.6em;
+}
+
+#inner-game-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;
+    gap: 10px;
+    & .btn-container{
+        display: inline-flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+#instructions-img, #config-img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#restart{
+    display: none;
+}
+
+#table-container{
+    border: 1px solid var(--smooth-black);
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.celda-p1, .celda-p2{
+    filter: drop-shadow(0 0 1px var(--smooth-black));
+}
+
+
+
+@media (max-width: 1200px) {
+    main{
+        
+        width: fit-content;
+    }
+    #game-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #table-container{
+        align-self: center;
+    }
+    .player-container{
+        font-size: 1.4rem;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+        text-align: left;
+        justify-content: space-around;
+    }
+    #instructions-img, #config-img{
+        width: 50px;
+        height: 50px;
+    }
+    td {
+        width: 25px;
+        height: 25px;
+    }
+    .btn{
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #instructions-img, #config-img{
+        width: 40px;
+        height: 40px;
+    }
+    #table-container{
+        margin: 10px;
+    }
+
+}

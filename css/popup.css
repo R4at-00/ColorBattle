@@ -1,0 +1,88 @@
+body{
+    background-color: white;
+}
+
+.popup-container{
+    z-index: 9;
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+    text-align: justify;
+    position: fixed;
+    background-color: var(--transparent-smooth-black);
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup-menu{
+    z-index: 99;
+    display: none;
+    /* display: flex; */
+    width: 30%;
+    background-color: white;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    & h1{
+        margin-bottom: 30px;
+    }
+}
+
+.popup-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#config .popup-info .btn-container{
+    display: inline-flex;
+    & .btn{
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+input#p1-nickname, input#p2-nickname, input#turn-time, #table-size, #n-usuarios{
+    padding: 6px 5px;
+    border: 1px solid var(--smooth-black);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+input{
+    font-family: consolas;
+}
+
+#easy-label, #hard-label{
+    display: inline-flex;
+    gap: 5px;
+    height: 100%;
+    margin-right: 20px;
+}
+
+#hard-mode-img, #easy-mode-img{
+    width: 50px;
+    height: 50px;
+}
+
+#easy-mode-gif, #hard-mode-gif{
+    width: 100px;
+    height: 50px;
+}
+
+@media (max-width: 1200px) {
+    
+    .popup-menu{
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        overflow: hidden scroll;
+    }
+}
+
+@media (max-width: 600px) {
+    #hard-mode-img, #easy-mode-img{
+        width: 30px;
+        height: 30px;
+    }
+}
