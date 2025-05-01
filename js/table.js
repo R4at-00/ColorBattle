@@ -43,12 +43,8 @@ function retrieveTabla(){
                         cambiarColor(posicion, '1');
                         comprobarAlineaciones('1', posicion);
                         pintarCelda();
-
-
-                        
                         startTurnTime();
                         setTablero(JSON.stringify(table));
-                        celdasScored();
                         turnoTxt();
                     }
                 }
@@ -125,12 +121,9 @@ function construyeTabla(n) {
                         cambiarColor(posicion, '1');
                         comprobarAlineaciones('1', posicion);
                         pintarCelda();
-
-
-                        
+                        celdasScored();
                         startTurnTime();
                         setTablero(JSON.stringify(table));
-                        celdasScored();
                         turnoTxt();
                     }
                 }

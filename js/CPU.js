@@ -15,7 +15,10 @@ function colocarCelda(){
 }
 
 function pintarCelda(){
-    let posicionCPU = colocarCelda();
-    cambiarColor(posicionCPU, '2');
-    comprobarAlineaciones('2', posicionCPU);
+    celdasScored();
+    if(scoreJugador + scoreRival < Number($tableSize.value)**2){
+        let posicionCPU = colocarCelda();
+        cambiarColor(posicionCPU, '2');
+        comprobarAlineaciones('2', posicionCPU);
+    }
 }
